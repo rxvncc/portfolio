@@ -3,16 +3,34 @@ import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="color-scheme" content="light dark" />
-		<meta name="generator" content={Astro.generator} />
-		<title>RXVN</title>
-	</head>
-	<body class="m-0 h-dvh grid place-items-center">
-		<h1>Hello, world!</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="canonical" href="https://rxvn.cc" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta
+      name="description"
+      content="Reshad Ahammed Ayon (rxvn), software developer."
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Reshad Ahammed Ayon | rxvn</title>
+  </head>
+  <body class="m-0 min-h-dvh p-6 font-mono text-sm bg-white text-black dark:bg-black dark:text-white">
+    <h1 class="font-bold">Reshad Ahammed Ayon</h1>
+    <p class="text-neutral-500">software developer</p>
+    <div class="max-w-prose">
+      <p class="mt-4">Also known as Ayon, from Dhaka, Bangladesh.</p>
+      <p class="mt-4">
+        rxvn = r + 15 letters + n, with "xv" being 15 in Roman numerals.
+      </p>
+    </div>
+    <nav class="mt-4 flex gap-3">
+      <a href="mailto:contact@rxvn.cc">email</a>
+      <a href="https://t.me/rxvncc">telegram</a>
+      <a href="https://github.com/rxvncc">github</a>
+    </nav>
+  </body>
 </html>
