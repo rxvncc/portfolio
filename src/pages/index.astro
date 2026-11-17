@@ -1,5 +1,25 @@
 ---
 import "../styles/global.css";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity: {
+    "@type": "Person",
+    name: "Reshad Ahammed Ayon",
+    alternateName: "rxvn",
+    url: "https://rxvn.cc",
+    jobTitle: "Software Developer",
+    email: "mailto:contact@rxvn.cc",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Dhaka",
+      addressCountry: "Bangladesh",
+    },
+    knowsAbout: ["Software Development", "Web Development"],
+    sameAs: ["https://github.com/rxvncc", "https://t.me/rxvncc"],
+  },
+};
 ---
 
 <html lang="en">
@@ -13,24 +33,35 @@ import "../styles/global.css";
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta
       name="description"
-      content="Reshad Ahammed Ayon (rxvn), software developer."
+      content="Reshad Ahammed Ayon - rxvn, software developer."
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Reshad Ahammed Ayon | rxvn</title>
+    <title>Reshad Ahammed Ayon - rxvn</title>
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(schema)}
+    />
   </head>
   <body class="m-0 min-h-dvh p-6 font-mono text-sm bg-white text-black dark:bg-black dark:text-white">
     <h1 class="font-bold">Reshad Ahammed Ayon</h1>
-    <p class="text-neutral-500 dark:text-neutral-400">software developer</p>
+    <p class="text-neutral-500 dark:text-neutral-400">Software Developer</p>
     <div class="max-w-prose">
-      <p class="mt-4">Also known as Ayon, from Dhaka, Bangladesh.</p>
+      <p class="mt-4">
+        <p class="mt-4">
+          You can call me Ayon, and I'm from Dhaka, Bangladesh.
+        </p>
+      </p>
       <p class="mt-4">
         rxvn = r + 15 letters + n, with "xv" being 15 in Roman numerals.
       </p>
     </div>
     <nav class="mt-4 flex gap-3">
-      <a href="mailto:contact@rxvn.cc">email</a>
-      <a href="https://t.me/rxvncc">telegram</a>
-      <a href="https://github.com/rxvncc">github</a>
+      <a href="mailto:contact@rxvn.cc">Email</a>
+      <span>/</span>
+      <a href="https://t.me/rxvncc">Telegram</a>
+      <span>/</span>
+      <a href="https://github.com/rxvncc">GitHub</a>
     </nav>
   </body>
 </html>
