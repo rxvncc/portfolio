@@ -3,40 +3,90 @@ import "../styles/global.css";
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  mainEntity: {
-    "@type": "Person",
-    name: "Reshad Ahammed Ayon",
-    alternateName: "rxvn",
-    url: "https://rxvn.cc",
-    jobTitle: "Software Developer",
-    email: "mailto:contact@rxvn.cc",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Dhaka",
-      addressCountry: "Bangladesh",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://rxvn.cc/#website",
+      url: "https://rxvn.cc/",
+      name: "rxvn",
+      alternateName: "Reshad Ahammed Ayon",
     },
-    knowsAbout: ["Software Development", "Web Development"],
-    sameAs: ["https://github.com/rxvncc", "https://t.me/rxvncc"],
-  },
+    {
+      "@type": "ProfilePage",
+      url: "https://rxvn.cc/",
+      mainEntity: {
+        "@type": "Person",
+        "@id": "https://rxvn.cc/#person",
+        name: "Reshad Ahammed Ayon",
+        alternateName: ["rxvn", "rxvncc"],
+        url: "https://rxvn.cc/",
+        description: "Software developer from Dhaka, Bangladesh.",
+        jobTitle: "Software Developer",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Dhaka",
+          addressCountry: "BD",
+        },
+        knowsAbout: [
+          "Software Development",
+          "Web Development",
+          "Open Source",
+          "JavaScript",
+          "TypeScript",
+          "Linux",
+        ],
+        sameAs: ["https://github.com/rxvncc", "https://t.me/rxvncc"],
+      },
+    },
+  ],
 };
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="canonical" href="https://rxvn.cc" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>Reshad Ahammed Ayon (rxvn) - Software Developer</title>
     <meta
       name="description"
-      content="Reshad Ahammed Ayon - rxvn, software developer."
+      content="Reshad Ahammed Ayon (rxvn) is a software developer from Dhaka, Bangladesh. Find GitHub, Telegram and contact links here."
     />
-    <meta name="generator" content={Astro.generator} />
-    <title>Reshad Ahammed Ayon - rxvn</title>
+    <link rel="canonical" href="https://rxvn.cc/" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="rxvn" />
+    <meta
+      property="og:title"
+      content="Reshad Ahammed Ayon (rxvn) - Software Developer"
+    />
+    <meta
+      property="og:description"
+      content="Software developer from Dhaka, Bangladesh."
+    />
+    <meta property="og:url" content="https://rxvn.cc/" />
+    <meta property="og:image" content="https://rxvn.cc/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Reshad Ahammed Ayon, Software Developer, rxvn.cc"
+    />
+    <meta property="profile:first_name" content="Reshad" />
+    <meta property="profile:last_name" content="Ahammed Ayon" />
+    <meta property="profile:username" content="rxvncc" />
+
+    <!-- Twitter / X (falls back to the Open Graph tags above) -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Icons -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Structured data -->
     <script
       is:inline
       type="application/ld+json"
@@ -44,24 +94,34 @@ const schema = {
     />
   </head>
   <body class="m-0 min-h-dvh p-6 font-mono text-sm bg-white text-black dark:bg-black dark:text-white">
-    <h1 class="font-bold">Reshad Ahammed Ayon</h1>
-    <p class="text-neutral-500 dark:text-neutral-400">Software Developer</p>
-    <div class="max-w-prose">
+    <header>
+      <h1 class="font-bold">Reshad Ahammed Ayon</h1>
+      <p class="text-neutral-500 dark:text-neutral-400">Software Developer</p>
+    </header>
+    <main class="max-w-prose">
       <p class="mt-4">
-        <p class="mt-4">
-          You can call me Ayon, and I'm from Dhaka, Bangladesh.
-        </p>
+        You can call me Ayon, and I'm from Dhaka, Bangladesh. If you're
+        wondering about rxvn: it's a numeronym, like i18n. The r, then 15
+        letters, then the n, with the 15 written as xv. The profiles linked
+        below use rxvncc, which is just rxvn.cc without the dot.
       </p>
-      <p class="mt-4">
-        rxvn = r + 15 letters + n, with "xv" being 15 in Roman numerals.
-      </p>
-    </div>
-    <nav class="mt-4 flex gap-3">
-      <a href="mailto:contact@rxvn.cc">Email</a>
-      <span>/</span>
-      <a href="https://t.me/rxvncc">Telegram</a>
-      <span>/</span>
-      <a href="https://github.com/rxvncc">GitHub</a>
+    </main>
+    <nav class="mt-4" aria-label="Contact and profiles">
+      <ul class="flex gap-3">
+        <li>
+          <a href="mailto:contact@rxvn.cc">Email</a>
+        </li>
+        <li>
+          <a href="https://t.me/rxvncc" rel="me">
+            Telegram
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/rxvncc" rel="me">
+            GitHub
+          </a>
+        </li>
+      </ul>
     </nav>
   </body>
 </html>
