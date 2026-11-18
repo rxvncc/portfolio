@@ -9,7 +9,8 @@
     "astro": "astro",
     "generate-types": "wrangler types",
     "deploy": "astro build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "fmt": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.4.8",
