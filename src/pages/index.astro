@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 
+const description =
+  "Software developer from Dhaka, Bangladesh, building for the web and open source. Find my GitHub and email address here, plus the story behind the rxvn name.";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -33,7 +36,7 @@ const schema = {
           "Software Development",
           "Web Development",
         ],
-        sameAs: ["https://github.com/rxvncc", "https://t.me/rxvncc"],
+        sameAs: ["https://github.com/rxvncc"],
       },
     },
   ],
@@ -46,10 +49,7 @@ const schema = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reshad Ahammed Ayon (rxvn)</title>
-    <meta
-      name="description"
-      content="Software developer from Dhaka, Bangladesh, building for the web and open source. Find my GitHub, Telegram and email links here, plus the story behind rxvn."
-    />
+    <meta name="description" content={description} />
     <link rel="canonical" href="https://rxvn.cc/" />
     <meta name="color-scheme" content="light dark" />
 
@@ -57,10 +57,7 @@ const schema = {
     <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="rxvn" />
     <meta property="og:title" content="Reshad Ahammed Ayon (rxvn)" />
-    <meta
-      property="og:description"
-      content="Software developer from Dhaka, Bangladesh, building for the web and open source. Find my GitHub, Telegram and email links here, plus the story behind rxvn."
-    />
+    <meta property="og:description" content={description} />
     <meta property="og:url" content="https://rxvn.cc/" />
     <meta property="og:image" content="https://rxvn.cc/og.png" />
     <meta property="og:image:width" content="1200" />
@@ -109,22 +106,20 @@ const schema = {
         simply this domain without the dot.
       </p>
     </main>
-    <nav class="mt-4" aria-label="Contact and profiles">
-      <ul class="flex gap-3">
-        <li>
-          <a href="mailto:contact@rxvn.cc">Email</a>
-        </li>
-        <li>
-          <a href="https://t.me/rxvncc" rel="me">
-            Telegram
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/rxvncc" rel="me">
-            GitHub
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <footer class="mt-4 flex flex-col items-start">
+      <a
+        href="mailto:contact@rxvn.cc"
+        class="underline text-blue-700 dark:text-blue-400"
+      >
+        contact@rxvn.cc
+      </a>
+      <a
+        href="https://github.com/rxvncc"
+        rel="me"
+        class="underline text-blue-700 dark:text-blue-400"
+      >
+        github.com/rxvncc
+      </a>
+    </footer>
   </body>
 </html>
