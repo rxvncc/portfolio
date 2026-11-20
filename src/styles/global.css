@@ -1,13 +1,1 @@
 @import "tailwindcss";
-
-@layer base {
-  a {
-    text-decoration: underline;
-    color: var(--color-blue-700);
-  }
-  @media (prefers-color-scheme: dark) {
-    a {
-      color: var(--color-blue-400);
-    }
-  }
-}
