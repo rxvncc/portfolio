@@ -2,7 +2,7 @@
 import "../styles/global.css";
 
 const description =
-  "Software developer from Dhaka, Bangladesh, building for the web and open source. Find my GitHub and email address here, plus the story behind the rxvn name.";
+  "Web developer from Dhaka, Bangladesh, building for the web and open source. Find my GitHub and email address here, and the story behind the domain name.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -23,8 +23,8 @@ const schema = {
         name: "Reshad Ahammed Ayon",
         alternateName: ["rxvn", "rxvncc"],
         url: "https://rxvn.cc/",
-        description: "Software developer from Dhaka, Bangladesh.",
-        jobTitle: "Software Developer",
+        description: "Web developer from Dhaka, Bangladesh.",
+        jobTitle: "Web Developer",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Dhaka",
@@ -48,7 +48,7 @@ const schema = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reshad Ahammed Ayon (rxvn)</title>
+    <title>rxvn.cc</title>
     <meta name="description" content={description} />
     <link rel="canonical" href="https://rxvn.cc/" />
     <meta name="color-scheme" content="light dark" />
@@ -64,7 +64,7 @@ const schema = {
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Reshad Ahammed Ayon, Software Developer, rxvn.cc"
+      content="Reshad Ahammed Ayon, Web Developer, rxvn.cc"
     />
     <meta property="profile:first_name" content="Reshad" />
     <meta property="profile:last_name" content="Ahammed Ayon" />
@@ -85,39 +85,43 @@ const schema = {
       set:html={JSON.stringify(schema)}
     />
   </head>
-  <body class="m-0 min-h-dvh p-6 font-mono text-sm bg-white text-black dark:bg-black dark:text-white">
+  <body class="p-6 font-mono bg-white text-black dark:bg-black dark:text-white">
     <header>
-      <h1 class="font-bold">Reshad Ahammed Ayon</h1>
-      <p class="text-neutral-500 dark:text-neutral-400">Software Developer</p>
+      <p>My name is Reshad Ahammed Ayon, but you can call me Ayon.</p>
+      <p>I develop websites from Dhaka, Bangladesh.</p>
     </header>
     <main class="max-w-prose mt-4 space-y-4">
       <p>
-        You can call me Ayon, and I'm from Dhaka, Bangladesh. I build for the
-        web and contribute to open source.
+        If you're wondering about rxvn.cc, the first part, rxvn, is a numeronym,
+        similar to i18n. It's made up of the first and last letters of my name,
+        with the 15 letters in between represented by XV (the Roman numeral for
+        15). As for .cc, I chose it because it was short and affordable compared
+        to the alternatives. Together, the entire domain is just seven
+        characters long.
       </p>
       <p>
-        If you're wondering about rxvn: it's a numeronym, like i18n. The r, then
-        15 letters, then the n, with the 15 written as xv. As for .cc, it was
-        short and dirt cheap compared to the other options, and it keeps the
-        whole address at seven characters.
+        I try to use rxvncc as my username across third-party platforms. It's
+        simply this domain without the dot. Since rxvn is sometimes already
+        taken, and some platforms don't allow periods in usernames, rxvncc makes
+        for a convenient alternative.
       </p>
       <p>
-        I try to use rxvncc as my handle on third-party platforms, which is
-        simply this domain without the dot.
+        I don't currently maintain a blog or an active social media presence. I
+        used to, but eventually came to the conclusion that these platforms
+        aren't as beneficial as they might seem. Of course, they can be useful,
+        or even necessary, for some people. Fortunately, I haven't found myself
+        needing them so far.
+      </p>
+      <p>
+        I'm not particularly active on instant messaging platforms. Email is my
+        preferred way to communicate.
       </p>
     </main>
-    <footer class="mt-4 flex flex-col items-start">
-      <a
-        href="mailto:contact@rxvn.cc"
-        class="underline text-blue-700 dark:text-blue-400"
-      >
+    <footer class="mt-4 gap-4 flex flex-col sm:flex-row">
+      <a href="mailto:contact@rxvn.cc" class="underline">
         contact@rxvn.cc
       </a>
-      <a
-        href="https://github.com/rxvncc"
-        rel="me"
-        class="underline text-blue-700 dark:text-blue-400"
-      >
+      <a href="https://github.com/rxvncc" rel="me" class="underline">
         github.com/rxvncc
       </a>
     </footer>
